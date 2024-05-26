@@ -1,0 +1,42 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "cabecalho cabecalho cabecalho cabecalho"
+                         "hero hero hero hero"
+                         "sobre sobre sobre sobre"
+                         "servicos servicos servicos servicos"
+                         "projetos projetos projetos projetos"
+                         "rodape rodape rodape rodape";
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}                         
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: aqua;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.sobre {
+    grid-area: sobre;
+}
+
+.servicos {
+    grid-area: servicos;
+}
+
+.projetos {
+    grid-area: projetos;
+}
+
+.rodape {
+    grid-area: rodape;
+}
