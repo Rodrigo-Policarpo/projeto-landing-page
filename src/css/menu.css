@@ -1,0 +1,16 @@
+.cabecalho nav ul {
+    display: flex;
+}
+
+.cabecalho nav ul li a {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.cabecalho nav ul li a:hover {
+    color: #FFFFFF;
+    background-color: coral;
+}

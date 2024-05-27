@@ -11,12 +11,37 @@
     <link rel="stylesheet" href="src/css/menu.css">
     <link rel="stylesheet" href="src/css/font-awesome.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <title>Agência Fictícia</title>
 </head>
 
 <body>
-    <header class="cabecalho">1</header>
+    <header class="cabecalho">
+        <div class="cabecalho-container">
+            <a href="/">
+                <h1 class="logo">Agência Fictícia</h1>
+            </a>
+
+            <input type="checkbox" id="menu-hamburguer"/>
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label>
+            
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#rodape">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <section class="hero">2</section>
     <section class="sobre">3</section>
     <section class="servicos">4</section>
