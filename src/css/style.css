@@ -2,19 +2,21 @@ html {
     font-size: 62.5%;
 }
 
+
 body {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "cabecalho cabecalho cabecalho cabecalho"
                          "hero hero hero hero"
                          "sobre sobre sobre sobre"
                          "servicos servicos servicos servicos"
                          "projetos projetos projetos projetos"
                          "rodape rodape rodape rodape";
-    grid-template-columns: repeat(4, 1fr);
     font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }                         
+
 
 .cabecalho {
     grid-area: cabecalho;
@@ -80,9 +82,75 @@ body {
     }
 }
 
+
 .sobre {
     grid-area: sobre;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #FFFFFF;
+    max-width: var(--max-width-size);
+    margin: 0 auto;
 }
+
+.sobre .imagem {
+    width: 100%;
+    height: 100%;
+}
+
+.sobre .imagem.direita {
+    background: url('../images/bridge.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.sobre .imagem.esquerda {
+    background: url('../images/sky.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.sobre .item {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.sobre .item h3 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.sobre .item p {
+    font-size: 1.8rem;
+    margin: 30px 0;
+    font-weight: 400;
+}
+
+.sobre .item .btn-saiba-mais {
+    font-size: 1.6rem;
+    align-self: flex-start;
+    transition: 0.3s ease-in-out;
+}
+
+.sobre .item .btn-saiba-mais:hover {
+    font-weight: 700;
+}
+
+@media (max-width: 425px) {
+    .sobre .item {
+        text-align: center;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .sobre .item .btn-saiba-mais {
+        align-self: center;
+    }
+}
+
 
 .servicos {
     grid-area: servicos;
