@@ -86,7 +86,7 @@ body {
 .sobre {
     grid-area: sobre;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     background-color: #FFFFFF;
     max-width: var(--max-width-size);
     margin: 0 auto;
@@ -154,12 +154,125 @@ body {
 
 .servicos {
     grid-area: servicos;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+.servicos .servico {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.servicos .servico img {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.servicos .servico h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.servicos .servico p {
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    margin: 20px auto 0;
+    line-height: 25px;
+}
+
+.servicos .servico:nth-child(1) {
+    background-color: lightskyblue;
+}
+
+.servicos .servico:nth-child(2) {
+    background-color: lightpink;
+}
+
+@media (max-width: 425px) {
+    .servicos {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .projetos {
     grid-area: projetos;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
+
+.projetos img {
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.projetos a:hover img {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .projetos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 425px) {
+    .projetos {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
 
 .rodape {
     grid-area: rodape;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.rodape h4 {
+    font-size: 2.5rem; 
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.rodape nav {
+    margin: 50px 0;
+}
+
+.rodape nav ul {
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.rodape nav ul li a {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.rodape nav ul li a:hover {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.rodape .social i {
+    font-size: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.rodape .social a {
+    margin: 20px;
+}
+
+.rodape .social a:hover {
+    color: #FFFFFF;
 }
